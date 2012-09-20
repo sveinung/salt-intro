@@ -1,1 +1,4 @@
 *.box
+iso/
+*.swp
+.vagrant

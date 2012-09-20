@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+  box = "ubuntu-11.10-server-amd64-salt096"
+
+  config.vm.define :master do |master_config|
+    master_config.vm.box = box
+
+    master_config.vm.host_name = "master.dalatun.no"
+
+    master_config.vm.network :hostonly, "192.168.1.10"
+
+    master_config.vm.provision :shell, :path => "master_setup.sh"
+  end
+
+  config.vm.define :minion do |minion_config|
+    minion_config.vm.box = box
+
+    minion_config.vm.host_name = "minion.dalatun.no"
+
+    minion_config.vm.network :hostonly, "192.168.1.11"
+
+    minion_config.vm.provision :shell do |shell|
+      shell.path = "minion_setup.sh"
+      shell.args = "192.168.1.10"
+    end
+  end
+end
