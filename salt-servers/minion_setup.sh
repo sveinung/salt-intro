@@ -5,7 +5,7 @@ echo "Initializing a Salt minion on $hn"
 
 sudo cp /vagrant/minion.conf /etc/salt/minion
 
-sudo salt-minion -d
+nohup sudo salt-minion > /dev/null 2>&1 &
 
 echo 'Salt minion running...'
 

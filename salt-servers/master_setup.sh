@@ -4,7 +4,7 @@ echo 'Initializing the Salt master'
 
 sudo cp /vagrant/master.conf /etc/salt/master
 
-sudo salt-master -d
+nohup sudo salt-master > /dev/null 2>&1 &
 
 echo 'Salt master running ...'
 
