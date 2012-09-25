@@ -1,6 +1,7 @@
-/home/vagrant/folder/another:
+some_directory:
   file:
     - directory
+    - name: /home/vagrant/folder/another
     - user: vagrant
     - group: vagrant
     - mode: 755
@@ -11,4 +12,4 @@
     - recurse
     - source: salt://files/lots_of_files
     - require:
-      - file: /home/vagrant/folder/another
+      - file: some_directory
