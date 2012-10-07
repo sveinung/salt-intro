@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  box = "ubuntu-11.10-server-amd64-salt096"
+  box = "ubuntu-11.10-server-amd64-salt-0.10.3"
 
   config.vm.define :master do |master_config|
     master_config.vm.box = box
