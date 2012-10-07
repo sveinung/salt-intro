@@ -3,6 +3,7 @@
 hn=`hostname`
 echo "Initializing a Salt minion on $hn"
 
+sudo mkdir -p /etc/salt
 sudo cp /vagrant/minion.conf /etc/salt/minion
 
 nohup sudo salt-minion > /dev/null 2>&1 &
