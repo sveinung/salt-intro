@@ -25,7 +25,7 @@ vagrant basebox build ubuntu-11.10-server-amd64-salt-0.10.3
 ```bash
 vagrant basebox validate ubuntu-11.10-server-amd64-salt-0.10.3
 ```
-Validation probably fails at some points, but who cares ..?
+Validation probably fails at some points, but who cares :)
 
 ```bash
 vagrant basebox export   ubuntu-11.10-server-amd64-salt-0.10.3
