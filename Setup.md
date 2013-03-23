@@ -1,5 +1,5 @@
-Intro til Salt
-==============
+Salt intro
+==========
 
 VeeWee template stolen from mattmcclean
 
